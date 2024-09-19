@@ -23,3 +23,14 @@ function child_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+
+
+// footer copyright year
+function current_year_init() {
+	function current_year_fn () {
+		$year = date_i18n ('Y');
+		return $year;
+	}
+	add_shortcode ('current_year', 'current_year_fn');
+}
+add_action('init', 'current_year_init');

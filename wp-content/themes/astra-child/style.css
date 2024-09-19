@@ -9,3 +9,188 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: astra-child
 Template: astra
 */
+/* line 50, style.scss */
+a {
+  text-decoration: none;
+}
+/* line 52, style.scss */
+a:focus {
+  outline: none;
+}
+
+@media (max-width: 1000px) and (min-width: 921px) {
+  /* line 60, style.scss */
+  .main-header-menu .menu-item > .menu-link {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+}
+
+/* line 67, style.scss */
+.button.wc-forward:hover {
+  background-color: var(--e-global-color-primary) !important;
+}
+
+/* line 73, style.scss */
+.wp-block-button__link, .icon-search {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  border: 0px !important;
+  border-radius: 50px !important;
+  box-shadow: 0 0 10px #e46e6e03;
+}
+
+/* line 83, style.scss */
+.icon-search {
+  color: var(--e-global-color-primary) !important;
+  background-color: transparent !important;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* line 91, style.scss */
+.icon-search svg {
+  fill: var(--e-global-color-primary);
+  margin-top: 0;
+  margin-right: 0;
+}
+/* line 97, style.scss */
+.icon-search:hover {
+  color: #fff !important;
+  background-color: var(--e-global-color-primary) !important;
+}
+/* line 100, style.scss */
+.icon-search:hover svg {
+  fill: #fff;
+}
+
+/* line 105, style.scss */
+.wp-block-button__link {
+  white-space: nowrap;
+  color: #fff !important;
+  background-color: var(--e-global-color-accent) !important;
+}
+/* line 109, style.scss */
+.wp-block-button__link:hover {
+  background-color: #d56161 !important;
+}
+@media (max-width: 921px) {
+  /* line 105, style.scss */
+  .wp-block-button__link {
+    display: block;
+    margin: 20px;
+  }
+}
+
+/* line 129, style.scss */
+input[type="radio"], input[type="checkbox"] {
+  opacity: 0;
+  display: none;
+}
+/* line 132, style.scss */
+input[type="radio"] + label, input[type="radio"] + span, input[type="checkbox"] + label, input[type="checkbox"] + span {
+  display: inline-flex !important;
+  align-items: center;
+  position: relative;
+}
+/* line 136, style.scss */
+input[type="radio"] + label:before, input[type="radio"] + span:before, input[type="checkbox"] + label:before, input[type="checkbox"] + span:before {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  display: inline-block;
+  border: 1px solid #aaa;
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+/* line 150, style.scss */
+input[type="radio"] + label:before {
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  background-color: #ffffff;
+  box-shadow: 0 0 0px 1px #c7c7c7;
+}
+/* line 157, style.scss */
+input[type="radio"]:checked + label:before {
+  background-color: var(--e-global-color-primary);
+  box-shadow: 0 0 0px 1px var(--e-global-color-primary);
+}
+
+/* line 165, style.scss */
+input[type="checkbox"] + label:before, input[type="checkbox"] + span:before {
+  border-radius: 2px;
+}
+/* line 170, style.scss */
+input[type="checkbox"]:checked + label:before, input[type="checkbox"]:checked + span:before {
+  border-color: var(--e-global-color-text);
+}
+/* line 173, style.scss */
+input[type="checkbox"]:checked + label::after, input[type="checkbox"]:checked + span::after {
+  content: '';
+  height: 0.8rem;
+  width: 0.5rem;
+  display: block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  margin-left: -1.2rem;
+  margin-left: -1.1rem;
+  margin-top: -4px;
+  border-bottom: 4px solid var(--e-global-color-text);
+  border-right: 3px solid var(--e-global-color-text);
+  box-shadow: 1px 1px 0 1px #ffffff;
+}
+
+/* line 192, style.scss */
+.animate-index {
+  max-width: 100%;
+  height: auto !important;
+}
+/* line 196, style.scss */
+.animate-index canvas {
+  max-width: 100%;
+  height: auto !important;
+  position: relative !important;
+  display: block;
+}
+/* line 202, style.scss */
+.animate-index #dom_overlay_container {
+  max-width: 100%;
+  height: auto !important;
+  pointer-events: none;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  display: block;
+}
+
+/* line 236, style.scss */
+footer .copyright {
+  font-weight: 300;
+  font-size: 15px;
+}
+/* line 239, style.scss */
+footer .copyright a, footer .copyright .elementor-shortcode {
+  color: #fff;
+  font-size: 15px;
+}
+/* line 244, style.scss */
+footer .copyright a:hover {
+  color: var(--e-global-color-primary);
+}
+/* line 252, style.scss */
+footer .footer-category .footer-warp {
+  display: block;
+}
+/* line 258, style.scss */
+footer .footer-category .category .item > a {
+  color: var(--e-global-color-text);
+}
+/* line 260, style.scss */
+footer .footer-category .category .item > a:hover {
+  color: var(--e-global-color-secondary);
+}

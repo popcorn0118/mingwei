@@ -1,0 +1,268 @@
+/**
+Theme Name: astra-child
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+
+$primary: var( --e-global-color-primary );
+$second: var( --e-global-color-secondary );
+$text: var( --e-global-color-text );
+$accent: var( --e-global-color-accent );
+
+//共用
+@mixin arrow($direction, $color, $size) {  
+    content: '';
+    width: $size;
+    height: $size;
+    border-radius: 3px;
+    border-right: 3px solid $color;
+    border-bottom: 3px solid $color;
+    display: inline-block;
+    @if $direction == top {
+      transform: rotate(-135deg);
+    } @else if $direction == right {
+      transform: rotate(-45deg);
+    } @else if $direction == bottom {
+      transform: rotate(45deg);
+    } @else if $direction == left {
+      transform: rotate(135deg);
+    } @else {
+      transform: rotate(-135deg);
+    }
+}
+@mixin word-count($num) {
+    display:-webkit-box;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -webkit-line-clamp: $num; // 想顯示的行數
+    -webkit-box-orient: vertical;
+  }
+body {
+  * {
+  }
+}
+a {
+    text-decoration: none;
+    &:focus {
+      outline: none;
+    }
+}
+
+//header
+.main-header-menu {
+  @media (max-width: 1000px) and (min-width: 921px) {
+    .menu-item > .menu-link {
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+  }
+}
+.button.wc-forward {
+  &:hover {
+    background-color: $primary !important;
+    // border-color: $primary !important;
+  }
+}
+
+.wp-block-button__link, .icon-search {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  border: 0px !important;
+  border-radius: 50px !important;
+  box-shadow: 0 0 10px #e46e6e03;
+  &:hover {
+    
+  }
+}
+.icon-search {
+  color: $primary !important;
+  background-color: transparent !important;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  svg {
+    fill: $primary;
+    margin-top: 0;
+    margin-right: 0;
+    // padding: 15px;
+  }
+  &:hover {
+    color: #fff !important;
+    background-color: $primary !important;
+    svg {
+      fill: #fff;
+    }
+  }
+}
+.wp-block-button__link {
+  white-space: nowrap;
+  color: #fff !important;
+  background-color: $accent !important;
+  &:hover {
+    background-color: #d56161 !important;
+  }
+  @media (max-width: 921px) {
+    display: block;
+    margin: 20px;
+  }
+}
+.ast-header-sticked {
+  // .wp-block-button__link, .icon-search {
+  //   background-color: transparent !important;
+  //   border: 1px solid $primary !important;
+  //   &:hover {
+  //     color: #fff !important;
+  //     background-color: $primary !important;
+  //   }
+  // }
+}
+
+input {
+  &[type="radio"], &[type="checkbox"]{
+    opacity: 0;
+    display: none;
+    +label, +span {
+      display: inline-flex !important;
+      align-items: center;
+      position: relative;
+      &:before {
+        content: "";
+        height: 1rem;
+        width: 1rem;
+        display: inline-block;
+        border: 1px solid #aaa;
+        margin-left: 0;
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+input[type="radio"] {
+  +label:before {
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    background-color: #ffffff;
+    box-shadow: 0 0 0px 1px #c7c7c7;
+  }
+  &:checked+label {
+    &:before {
+      background-color: $primary;
+      box-shadow: 0 0 0px 1px $primary;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  +label:before, +span:before {
+    border-radius: 2px;
+  }
+  &:checked {
+    +label, +span {
+      &:before {
+        border-color: $text;
+      }
+      &::after {
+        content: '';
+        height: 0.8rem;
+        width: 0.5rem;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        margin-left: -1.2rem;
+        margin-left: -1.1rem;
+        margin-top: -4px;
+        border-bottom: 4px solid $text;
+        border-right: 3px solid $text;
+        box-shadow: 1px 1px 0 1px #ffffff;
+      }
+    }
+  }
+}
+
+.animate-index {
+  max-width: 100%;
+  height:auto !important;
+  // max-width: ;
+  canvas {
+    max-width: 100%;
+    height:auto !important;
+    position: relative !important;
+    display: block;
+  }
+  #dom_overlay_container {
+    max-width: 100%;
+    height:auto !important;
+    pointer-events:none;
+    overflow:hidden; 
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: block;
+  }
+}
+
+footer {
+  // .footer-top {
+  //   .menu {
+  //     list-style: none;
+  //     margin: 0;
+  //     padding: 0;
+  //     display: flex;
+  //     @media (max-width: 768px) {
+  //       flex-direction: column;
+  //       line-height: 2;
+  //     }
+  //     li {
+  //       a {
+  //         color: $text;
+  //         padding: 0 5px;
+  //         &:hover {
+  //           color: $second;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  .copyright {
+    font-weight: 300;
+    font-size: 15px;
+    a, .elementor-shortcode {
+      color: #fff;
+      font-size: 15px;
+    }
+    a {
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  
+
+  .footer-category {
+    .footer-warp {
+      display: block;
+      
+    }
+    .category {
+      .item {
+        > a {
+          color: $text;
+          &:hover {
+            color: $second;
+          }
+        }
+      }
+    }
+  }
+  
+}
