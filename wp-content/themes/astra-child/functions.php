@@ -34,3 +34,25 @@ function current_year_init() {
 	add_shortcode ('current_year', 'current_year_fn');
 }
 add_action('init', 'current_year_init');
+
+
+/**
+ * 
+ * Change the breakpoint of the Astra Header Menus
+ * 
+ * @return int Screen width when the header should change to the mobile header.
+ */
+// function your_prefix_change_header_breakpoint() {
+// 	return 1120;
+// };
+// add_filter( 'astra_header_break_point', 'your_prefix_change_header_breakpoint' );
+
+// Update your custom tablet breakpoint below - like return 1120;
+add_filter( 'astra_tablet_breakpoint', function() {
+    return 1120;
+});
+
+// Update your custom mobile breakpoint below - like return 544;
+// add_filter( 'astra_mobile_breakpoint', function() {
+//     return 544;
+// });
