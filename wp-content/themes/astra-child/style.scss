@@ -56,10 +56,10 @@ a {
 
 //header
 .main-header-menu {
-  @media (max-width: 1235px) and (min-width: 1032px) {
+  @media (max-width: 1235px) and (min-width: 1121px) {
     .menu-item > .menu-link {
-      padding-left: 11px;
-      padding-right: 11px;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }  
   // @media (max-width: 1031px) and (min-width: 921px) {
@@ -69,6 +69,11 @@ a {
   //     font-size: 16px;
   //   }
   // }
+}
+.custom-logo {
+  @media (max-width: 1155px) and (min-width: 1121px) {
+    width: 115px !important;
+  }  
 }
 #ast-hf-mobile-menu {
   .current-menu-item {
