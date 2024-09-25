@@ -156,19 +156,26 @@ input[type="checkbox"]:checked + label::after, input[type="checkbox"]:checked + 
   box-shadow: 1px 1px 0 1px #ffffff;
 }
 
-/* line 211, style.scss */
+@media (max-width: 1024px) {
+  /* line 211, style.scss */
+  #index-main-img {
+    position: relative;
+  }
+}
+
+/* line 218, style.scss */
 .animate-index {
   max-width: 100%;
   height: auto !important;
 }
-/* line 215, style.scss */
+/* line 222, style.scss */
 .animate-index canvas {
   max-width: 100%;
   height: auto !important;
   position: relative !important;
   display: block;
 }
-/* line 221, style.scss */
+/* line 228, style.scss */
 .animate-index #dom_overlay_container {
   max-width: 100%;
   height: auto !important;
@@ -180,76 +187,76 @@ input[type="checkbox"]:checked + label::after, input[type="checkbox"]:checked + 
   display: block;
 }
 
-/* line 233, style.scss */
+/* line 240, style.scss */
 #chaty-widget-0 .chaty-widget {
   bottom: 120px !important;
 }
 
 @media (max-width: 1200px) {
-  /* line 237, style.scss */
+  /* line 244, style.scss */
   #chaty-widget-0 .chaty-widget {
     bottom: 90px !important;
   }
 
-  /* line 241, style.scss */
+  /* line 248, style.scss */
   #chaty-widget-0 .chaty-i-trigger .chaty-channel span.chaty-icon {
     text-align: right !important;
   }
-  /* line 243, style.scss */
+  /* line 250, style.scss */
   #chaty-widget-0 .chaty-i-trigger .chaty-channel span.chaty-icon .chaty-svg {
     width: 60px !important;
     height: 60px !important;
   }
 
-  /* line 249, style.scss */
+  /* line 256, style.scss */
   #ast-scroll-top {
     font-size: 28px;
   }
 }
 @media (max-width: 768px) {
-  /* line 254, style.scss */
+  /* line 261, style.scss */
   #chaty-widget-0 .chaty-widget {
     bottom: 65px !important;
   }
 
-  /* line 258, style.scss */
+  /* line 265, style.scss */
   #chaty-widget-0 .chaty-i-trigger .chaty-channel span.chaty-icon {
     text-align: right !important;
   }
-  /* line 260, style.scss */
+  /* line 267, style.scss */
   #chaty-widget-0 .chaty-i-trigger .chaty-channel span.chaty-icon .chaty-svg {
     width: 50px !important;
     height: 50px !important;
   }
 
-  /* line 266, style.scss */
+  /* line 273, style.scss */
   #ast-scroll-top {
     font-size: 23px;
   }
 }
-/* line 294, style.scss */
+/* line 301, style.scss */
 footer .copyright {
   font-weight: 300;
   font-size: 15px;
 }
-/* line 297, style.scss */
+/* line 304, style.scss */
 footer .copyright a, footer .copyright .elementor-shortcode {
   color: #fff;
   font-size: 15px;
 }
-/* line 302, style.scss */
+/* line 309, style.scss */
 footer .copyright a:hover {
   color: var(--e-global-color-primary);
 }
-/* line 310, style.scss */
+/* line 317, style.scss */
 footer .footer-category .footer-warp {
   display: block;
 }
-/* line 316, style.scss */
+/* line 323, style.scss */
 footer .footer-category .category .item > a {
   color: var(--e-global-color-text);
 }
-/* line 318, style.scss */
+/* line 325, style.scss */
 footer .footer-category .category .item > a:hover {
   color: var(--e-global-color-secondary);
 }

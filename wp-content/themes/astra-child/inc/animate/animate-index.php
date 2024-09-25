@@ -6,7 +6,7 @@ function init() {
 	canvas = document.getElementById("canvas");
 	anim_container = document.getElementById("animation_container");
 	dom_overlay_container = document.getElementById("dom_overlay_container");
-	var comp=AdobeAn.getComposition("7AE9594FA38C284BA377E5FDC1F4EDE1");
+	var comp=AdobeAn.getComposition("E6EFB591D2472D4D96730C9C49EBE6A3");
 	var lib=comp.getLibrary();
 	var loader = new createjs.LoadQueue(false);
 	loader.addEventListener("fileload", function(evt){handleFileLoad(evt,comp)});
