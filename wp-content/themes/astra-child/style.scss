@@ -284,6 +284,95 @@ input[type="checkbox"] {
   }
 }
 
+// 部落格/文章
+.archive, .single-post {
+  h1, h2, h1 *, h2 * {
+    font-family: 'Noto Serif TC', serif !important;
+  }
+  h1, h1 * {
+    font-size: 40px !important;
+    line-height: 1.5;
+    &::before {
+        content: '';
+        width: 50px;
+        height: 1px;
+        display: block;
+        border-bottom: 1px solid #e46e6e;
+        margin-bottom: 15px;
+    }
+  }
+  h2, h2 * {
+    font-size: 28px;
+  }
+  h3, h3 * {
+    color: $primary;
+    font-family: 'Noto Sans TC', serif !important;
+    font-size: 24px;
+  }
+  h4, h4 * {
+    color: $accent;
+    font-family: 'Noto Sans TC', serif !important;
+    font-size: 20px;
+  }
+  h4 {
+    display: flex;
+    align-items: center;
+    &::after {
+      content: '';
+      width: 50px;
+      display: inline-block;
+      border-bottom: 1px solid $accent;
+      margin-left: 10px;
+    }
+  }
+  h5, h5 * {
+    font-size: 18px;
+  }
+  h6, h6 * {
+    font-size: 16px;
+  }
+  ol, ul {
+    padding-left: 27px;
+  }
+  .ast-archive-description {
+    padding-bottom: 5px !important;
+  }
+  .sidebar-main {
+    .widget {
+      margin-bottom: 35px;
+    }
+  }
+  .wp-block-search {
+    .wp-block-search__label {
+      display: none;
+    }
+  }
+  .wp-block-search__inside-wrapper  {
+    .wp-block-search__input {
+      border: 1px solid #000;
+    }
+    .wp-block-search__button {
+      margin-left: 0;
+      border-left: 0px !important;
+      min-height: 50px;
+      padding: 20px !important;
+      background-color: #000 !important;
+      color: #fff !important;
+      &:hover {
+        background-color: #313131;
+      }
+    }
+  }
+}
+.archive {
+  
+}
+.single-post {
+  h1, h1 * {
+    font-size: 36px !important;
+  }
+
+}
 
 footer {
   // .footer-top {
